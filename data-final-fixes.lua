@@ -10,6 +10,9 @@ local mod_recipe = function(recipe)
       end
     end
   end
+  if recipe.energy_required then
+    recipe.energy_required = recipe.energy_required / 2
+  end
 end
 
 for _, recipe in pairs(data.raw.recipe) do
