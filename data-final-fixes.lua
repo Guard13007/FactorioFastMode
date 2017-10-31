@@ -31,3 +31,9 @@ for _, technology in pairs(data.raw.technology) do
     end
   end
 end
+
+for _, resource in pairs(data.raw.resource) do
+  if resource.minable and resource.minable.mining_time then
+    resource.minable.mining_time = resource.minable.mining_time / 2
+  end
+end
